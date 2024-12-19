@@ -425,7 +425,7 @@ function renderAFD(afd) {
 
     // If the currentPreContent is not empty or we detected a new pre block we are in
     // a preformatted section
-    if (/\s{2,}/.test(line) && /\d/.test(line)) {
+    if (/\s{2,}/.test(line) && /[A-Za-z/]\d/.test(line)) {
       currentPreContent += line + "\n";
       continue;
     } else if (currentPreContent.length > 0) {
