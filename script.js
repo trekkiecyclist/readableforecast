@@ -425,7 +425,7 @@ function renderAFD(afd) {
 
     // If the currentPreContent is not empty or we detected a new pre block we are in
     // a preformatted section
-    if (/\s{2,}/.test(line) && /[A-Za-z/]\d/.test(line)) {
+    if (/([A-Z]{3}\d{3}|^\s{3,}.*(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday))/.test(line)) {
       currentPreContent += line + "\n";
       continue;
     } else if (currentPreContent.length > 0) {
