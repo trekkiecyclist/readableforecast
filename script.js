@@ -408,7 +408,7 @@ function renderAFD(afd) {
 
   // We are processing the AFD line by line
   const lines = productText.split("\n");
-  console.log(lines);
+  // console.log(lines);
 
   let currentParagraphContent = "";
   let currentPreContent = "";
