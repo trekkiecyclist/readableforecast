@@ -408,7 +408,7 @@ function renderAFD(afd) {
 
   // We are processing the AFD line by line
   const lines = productText.split("\n");
-  // console.log(lines);
+  console.log(lines);
 
   let currentParagraphContent = "";
   let currentPreContent = "";
@@ -425,7 +425,7 @@ function renderAFD(afd) {
 
     // If the currentPreContent is not empty or we detected a new pre block we are in
     // a preformatted section
-    if (/([A-Z]{3}\d{3}|^\s{3,}.*(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday))/.test(line)) {
+    if (/(^[A-Z]{2}\.\.\.|^\s{5}|\d\s{2,}\d)/.test(line)) {
       currentPreContent += line + "\n";
       continue;
     } else if (currentPreContent.length > 0) {
